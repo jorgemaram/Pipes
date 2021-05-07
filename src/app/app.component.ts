@@ -10,5 +10,15 @@ export class AppComponent {
   arreglo: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   PI: number = Math.PI;
   porcentaje: number = 0.2451;
+  salario: number = 123546.25;
+  heroe = {
+    nombre: 'Logan',
+    clave: 'Wolverine',
+    edad: 32,
+    direccion: {
+      calle: 'Pien',
+      casa: 20
+    }
+  }
 
 }

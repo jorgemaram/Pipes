@@ -54,8 +54,23 @@
         </tr>
         <tr>
           <td>{{porcentaje}}</td>
-          <td> percent with decimals</td>
+          <td> percent with decimals:'2.2-2'</td>
           <td>{{ porcentaje | percent:'2.2-2'}}</td>
+        </tr>
+        <tr>
+          <td>{{salario}}</td>
+          <td> currency</td>
+          <td>{{ salario | currency}}</td>
+        </tr>
+        <tr>
+          <td>{{salario}}</td>
+          <td> currency:'EUR'</td>
+          <td>{{ salario | currency:'EUR'}}</td>
+        </tr>
+        <tr>
+          <td>{{salario}}</td>
+          <td> currency:'CAD':'symbol':'.0-0'</td>
+          <td>{{ salario | currency:'CAD ':'symbol':'.0-0'}}</td>
         </tr>
       </tbody>
     </table>
@@ -64,5 +79,15 @@
     <ul>
       <li *ngFor="let item of arreglo | slice:5:20">{{item}}</li>
     </ul>
+
+    <h4>JSON</h4>
+    <hr>
+    <div class="row mb-5">
+      <div class="col">
+        <pre>
+          {{heroe|json}}
+        </pre>
+      </div>
+    </div>
   </div>
 </div>
