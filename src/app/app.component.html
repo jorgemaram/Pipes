@@ -13,6 +13,11 @@
       </thead>
       <tbody>
         <tr>
+          <td>{{nombre2}}</td>
+          <td>capitalizado</td>
+          <td>{{ nombre2 | capitalizado}}</td>
+        </tr>
+        <tr>
           <td>{{nombre}}</td>
           <td>uppercase</td>
           <td>{{ nombre | uppercase }}</td>
@@ -71,6 +76,41 @@
           <td>{{salario}}</td>
           <td> currency:'CAD':'symbol':'.0-0'</td>
           <td>{{ salario | currency:'CAD ':'symbol':'.0-0'}}</td>
+        </tr>
+        <tr>
+          <td>{{valorPromesa}}</td>
+          <td> async</td>
+          <td>{{ valorPromesa | async}}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td> fecha</td>
+          <td>{{ fecha | date }}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td> fecha date:'medium'</td>
+          <td>{{ fecha | date:'medium' }}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td> fecha date:'short'</td>
+          <td>{{ fecha | date:'short' }}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td> fecha date:'MMMM-dd'</td>
+          <td>{{ fecha | date:'MMMM-dd' }}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td> fecha date:'MMMM-dd': 'timezone': '{{idioma}}
+            <br>
+            <button (click)="idioma='es'" class="me-1 btn btn-outline-danger">Español</button>
+            <button (click)="idioma='fr'"class="me-1 btn btn-outline-primary">Francés</button>
+            <button (click)="idioma='en'" class="me-1 btn btn-outline-success">Inglés</button>
+          </td>
+          <td>{{ fecha | date:'MMMM-dd': 'CEST': idioma }}</td>
         </tr>
       </tbody>
     </table>

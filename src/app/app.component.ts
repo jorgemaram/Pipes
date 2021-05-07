@@ -7,10 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   nombre: string = 'Capitán América';
+  nombre2: string = 'JoRGE MarTIN RAmirez'
   arreglo: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   PI: number = Math.PI;
   porcentaje: number = 0.2451;
   salario: number = 123546.25;
+  fecha: Date = new Date();
+  idioma: string = 'fr';
+
+  valorPromesa = new Promise<string>((resolve) => {
+    setTimeout(() => {
+      resolve('llegó la Data')
+    }, 4500);
+  });
+
+
   heroe = {
     nombre: 'Logan',
     clave: 'Wolverine',
@@ -20,5 +31,6 @@ export class AppComponent {
       casa: 20
     }
   }
+
 
 }
