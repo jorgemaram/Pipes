@@ -13,7 +13,9 @@ export class AppComponent {
   porcentaje: number = 0.2451;
   salario: number = 123546.25;
   fecha: Date = new Date();
+  activar: boolean = true;
   idioma: string = 'fr';
+  videoURL: string = 'https://www.youtube.com/embed/mk4amZlPa4g'
 
   valorPromesa = new Promise<string>((resolve) => {
     setTimeout(() => {
